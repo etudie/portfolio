@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <!--- HEADER FILE --->
+  {% include header.html %}
+
+  <body>
+    <!--- NAVBAR --->
+    {% include navbar.html %}
+
+    <center>
+    <!--- TITLE --->
+    <h1>{{page.title}}</h1>
+
+    <!--- SUBTITLE --->
+    <span class="text-muted">{{page.subtitle}}</span>
+    <hr>
+</center>
+
+    <div class="container">
+      {{ content }}
+
+      <form action="https://formspree.io/xnqonnqq" method="POST">
+
+<div style="width:80%">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="_replyto" class="form-control"  style="width:100%" required>
+          </div>
+
+
+          <div class="form-group">
+        <label>Your message:</label>
+        <textarea name="message" class="form-control" style="width:100% !important; display:block;" required></textarea>
+
+
+      </div>
+        <!-- your other form fields go here -->
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    </div>
+</body>
+<!--- FOOTER --->
+{% include footer.html %}
+</html>

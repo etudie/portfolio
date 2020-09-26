@@ -1,0 +1,30 @@
+<div class="container p-3">
+
+  <nav class="nav nav-tabs justify-content-center" style="border-bottom:1px solid #eee">
+
+
+    {% assign navItem = "Resume, Services, Projects, Teaching Resources, Involvement, Contact" | split: ", " %}
+
+    <a href="/" class="nav-item nav-link
+    {% if page.title == "Start Here" %}
+    active
+    {% endif %}
+    ">Start Here</a>
+    {% for item in navItem %}
+
+        <a href="/{{ item | remove: " " }}" class="nav-item nav-link
+        {% if page.title == item %}
+        active
+        {% endif %}
+        ">{{ item }}</a>
+    {% endfor %}
+
+
+
+    <!-- <a href="/resume" class="nav-link">Resume</a>
+    <a href="/projects" class="nav-link">Projects</a>
+    <a href="/teaching" class="nav-link">Teaching Resources</a>
+    <a href="/involvement" class="nav-link">Involvment</a>
+    <a href="/contact" class="nav-link">Contact</a> -->
+  </nav>
+</div><!--- END NAVBAR --->
